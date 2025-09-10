@@ -47,6 +47,14 @@ export default {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
+        medical: {
+          primary: "hsl(var(--medical-primary))",
+          secondary: "hsl(var(--medical-secondary))",
+          accent: "hsl(var(--medical-accent))",
+          success: "hsl(var(--medical-success))",
+          warning: "hsl(var(--medical-warning))",
+          danger: "hsl(var(--medical-danger))",
+        },
         sidebar: {
           DEFAULT: "hsl(var(--sidebar-background))",
           foreground: "hsl(var(--sidebar-foreground))",
@@ -80,10 +88,40 @@ export default {
             height: "0",
           },
         },
+        "pulse-glow": {
+          "0%, 100%": {
+            boxShadow: "0 0 20px hsl(var(--medical-primary) / 0.1)",
+          },
+          "50%": {
+            boxShadow: "0 0 30px hsl(var(--medical-primary) / 0.2)",
+          },
+        },
+        "slide-up": {
+          "0%": {
+            transform: "translateY(10px)",
+            opacity: "0",
+          },
+          "100%": {
+            transform: "translateY(0)",
+            opacity: "1",
+          },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
+        "pulse-glow": "pulse-glow 2s ease-in-out infinite",
+        "slide-up": "slide-up 0.3s ease-out",
+      },
+      backgroundImage: {
+        "gradient-primary": "var(--gradient-primary)",
+        "gradient-hero": "var(--gradient-hero)",
+        "gradient-card": "var(--gradient-card)",
+      },
+      boxShadow: {
+        "medical": "var(--shadow-medical)",
+        "card": "var(--shadow-card)",
+        "glow": "var(--shadow-glow)",
       },
     },
   },
